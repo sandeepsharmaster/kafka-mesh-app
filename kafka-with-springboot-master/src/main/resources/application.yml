@@ -1,0 +1,8 @@
+kafka:
+  bootstrap-servers: pkc-ldvj1.ap-southeast-2.aws.confluent.cloud:9092
+  topic:
+    simpleMessageTopic: kafkaSimpleMessageTopic
+    multiPartitionTopic: kafkaMultiPartitionTopic
+    batchConsumerTopic: kafkaBatchConsumerTopic
+    streamRawDataTopic: kafkaStreamRawDataTopic
+    streamProcessedDataTopic: kafkaStreamProcessedDataTopic
