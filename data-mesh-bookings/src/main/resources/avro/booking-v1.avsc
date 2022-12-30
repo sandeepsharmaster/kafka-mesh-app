@@ -1,6 +1,6 @@
 {
      "type": "record",
-     "namespace": "org.example",
+     "namespace": "org.example.pojo",
      "name": "Booking",
      "version": "1",
      "doc": "Booking schema Version 1",

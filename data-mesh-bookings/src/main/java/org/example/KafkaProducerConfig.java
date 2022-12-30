@@ -25,7 +25,7 @@ import org.springframework.kafka.support.ProducerListener;
 import org.springframework.kafka.support.converter.StringJsonMessageConverter;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 import io.confluent.kafka.serializers.AbstractKafkaSchemaSerDeConfig;
-import org.example.pojo.Visitor;
+import org.example.pojo.Booking;
 
 /**
  * KafkaProducerConfig
@@ -35,12 +35,12 @@ class KafkaProducerConfig {
 
 	private final Logger LOG = LoggerFactory.getLogger(getClass());
 
-	@Value("${io.reflectoring.kafka.bootstrap-servers}")
+	@Value("${org.example.kafka.bootstrap-servers}")
 	private String bootstrapServers;
 
 
 	@Bean
-	public ProducerFactory<String, Visitor> visitorProducerFactory() {
+	public ProducerFactory<String, Booking> visitorProducerFactory() {
 		Map<String, Object> configProps = new HashMap<>();
 		configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
 		configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
@@ -50,7 +50,7 @@ class KafkaProducerConfig {
 	}
 
 	@Bean
-	public KafkaTemplate<String, Visitor> visitorKafkaTemplate() {
+	public KafkaTemplate<String, Booking> visitorKafkaTemplate() {
 		return new KafkaTemplate<>(visitorProducerFactory());
 	}
 

@@ -24,13 +24,13 @@ class KafkaConsumerConfig {
 	/*@Autowired
 	private KafkaTemplate<String, String> kafkatemplate;*/
 	
-    @Value("${io.reflectoring.kafka.bootstrap-servers}")
+    @Value("${org.example.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
     Map<String, Object> consumerConfigs() {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "reflectoring-group");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "user-group-1");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         return props;
@@ -53,7 +53,7 @@ class KafkaConsumerConfig {
     public ConsumerFactory<String, User> userConsumerFactory() {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "reflectoring-user");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "user-group");
         return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new JsonDeserializer<>(User.class));
     }
 

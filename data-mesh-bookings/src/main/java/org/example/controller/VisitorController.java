@@ -13,6 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
-@RequestMapping(path = "/visitor")
+@RequestMapping(path = "/booking")
 public class VisitorController {
+
+    @GetMapping(path="/bookings", produces = "application/json")
+    public String getBookings()
+    {
+        return "Hey There!!";
+    }
 }

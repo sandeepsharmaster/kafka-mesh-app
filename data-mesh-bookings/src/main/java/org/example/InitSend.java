@@ -9,7 +9,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Component;
 
-import org.example.pojo.Visitor;
+import org.example.pojo.Booking;
 @Component
 class InitSend {
 	
@@ -21,36 +21,30 @@ class InitSend {
 	/*@Autowired
 	private KafkaSenderWithMessageConverter messageConverterSender;*/
 	
-	@Value("${io.reflectoring.kafka.topic-1}")
+	@Value("${org.example.kafka.topic.users}")
 	private String topic1;
 
-	@Value("${io.reflectoring.kafka.topic-2}")
+	@Value("${org.example.kafka.topic.bookings}")
 	private String topic2;
-	
-	@Value("${io.reflectoring.kafka.topic-3}")
-	private String topic3;
-
-	@Value("${org.example.kafka.topic.visitor}")
-	private String visitorTopic;
 	
 	@EventListener
 	void initiateSendingMessage(ApplicationReadyEvent event) throws InterruptedException {
 
 		Thread.sleep(5000);
 		LOG.info("---------------------------------");
-		Visitor visitor = Visitor.newBuilder()
-				.setAge(35)
-				//.setAutomatedEmail(false)
-				.setBookingId("XY123")
-				.setFirstName("John")
-				.setLastName("Doe")
-				.setBookingSource("MakeMyTrip")
+		Booking visitor = Booking.newBuilder()
+				.setBookingId("XYZ")
+				.setFirstName("Sandeep")
+				.setLastName("Sharma")
+				.setBookingSource("Trivago")
+				.setBookingStatus("Confirmed")
+				.setPaymentType("CC")
 				.build();
-		kafkaSenderExample.sendVisitorMessage(visitor, "visitors");
+		kafkaSenderExample.sendVisitorMessage(visitor, "bookings");
 
 		Thread.sleep(5000);
 		LOG.info("---------------------------------");
-		kafkaSenderExample.sendCustomMessage(new User("Lucario"), "reflectoring-user");
+		kafkaSenderExample.sendCustomMessage(new User("Lucario"), "users");
 
 	}
 }

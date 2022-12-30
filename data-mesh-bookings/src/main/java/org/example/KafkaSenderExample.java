@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.pojo.Visitor;
+import org.example.pojo.Booking;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,22 +20,22 @@ class KafkaSenderExample {
 	private RoutingKafkaTemplate routingKafkaTemplate;*/
 	private KafkaTemplate<String, User> userKafkaTemplate;
 
-	private KafkaTemplate<String, Visitor> visitorKafkaTemplate;
+	private KafkaTemplate<String, Booking> visitorKafkaTemplate;
 
 	@Autowired
 	KafkaSenderExample(
-			KafkaTemplate<String, User> userKafkaTemplate, KafkaTemplate<String, Visitor> visitorKafkaTemplate) {
+			KafkaTemplate<String, User> userKafkaTemplate, KafkaTemplate<String, Booking> visitorKafkaTemplate) {
 		/*this.kafkaTemplate = kafkaTemplate;
 		this.routingKafkaTemplate = routingKafkaTemplate;*/
 		this.userKafkaTemplate = userKafkaTemplate;
 		this.visitorKafkaTemplate = visitorKafkaTemplate;
 	}
 
-	void sendVisitorMessage(Visitor visitor, String topicName) {
+	void sendVisitorMessage(Booking visitor, String topicName) {
 		LOG.info("--------------------------------");
 		LOG.info("Sending Avro Serializer : {}", visitor);
 		LOG.info("--------------------------------");
-		ProducerRecord<String, Visitor> producerRecord = new ProducerRecord<String, Visitor>(topicName, visitor);
+		ProducerRecord<String, Booking> producerRecord = new ProducerRecord<String, Booking>(topicName, visitor);
 		visitorKafkaTemplate.send(producerRecord);
 		//visitorKafkaTemplate.send(topicName, visitor);
 	}
