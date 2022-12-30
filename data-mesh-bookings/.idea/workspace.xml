@@ -5,33 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a5da2f4-11da-4f28-9e7e-eecf3befc3c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InitSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/InitSend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaClassListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaListenersExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaListenersExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaProducerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaSenderExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaSenderExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaTopicConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/VisitorProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/VisitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/VisitorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/VisitorController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/avro/booking-v1.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/avro/booking-v1.avsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/avro/schema-Visitor-v1.avsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/avro/visitor-v2.avsc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/resources/avro/booking-v1.avsc" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -65,6 +57,11 @@
     "last_opened_file_path": "D:/Study/Kafka/handson/datamesh/local/kafka-mesh-app/data-mesh-bookings"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.controller" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="SpringKafkaExampleApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.SpringKafkaExampleApplication" />
