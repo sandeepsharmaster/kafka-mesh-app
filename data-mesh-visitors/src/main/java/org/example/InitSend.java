@@ -18,17 +18,6 @@ class InitSend {
 	@Autowired
 	private KafkaSenderExample kafkaSenderExample;
 	
-	/*@Autowired
-	private KafkaSenderWithMessageConverter messageConverterSender;*/
-	
-	@Value("${io.reflectoring.kafka.topic-1}")
-	private String topic1;
-
-	@Value("${io.reflectoring.kafka.topic-2}")
-	private String topic2;
-	
-	@Value("${io.reflectoring.kafka.topic-3}")
-	private String topic3;
 
 	@Value("${org.example.kafka.topic.visitor}")
 	private String visitorTopic;
@@ -47,10 +36,6 @@ class InitSend {
 				.setBookingSource("MakeMyTrip")
 				.build();
 		kafkaSenderExample.sendVisitorMessage(visitor, "visitors");
-
-		Thread.sleep(5000);
-		LOG.info("---------------------------------");
-		kafkaSenderExample.sendCustomMessage(new User("Lucario"), "reflectoring-user");
 
 	}
 }

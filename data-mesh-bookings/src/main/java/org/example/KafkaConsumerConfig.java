@@ -21,9 +21,7 @@ import org.springframework.kafka.support.serializer.JsonDeserializer;
 @Configuration
 class KafkaConsumerConfig {
 
-	/*@Autowired
-	private KafkaTemplate<String, String> kafkatemplate;*/
-	
+
     @Value("${org.example.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
@@ -40,29 +38,8 @@ class KafkaConsumerConfig {
         return new DefaultKafkaConsumerFactory<>(consumerConfigs());
     }
 
-    /*@Bean
-    KafkaListenerContainerFactory<ConcurrentMessageListenerContainer<String, String>> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(consumerFactory());
-        factory.setReplyTemplate(kafkatemplate);
-        // Comment the RecordFilterStrategy if Filtering is not required        
-        factory.setRecordFilterStrategy(record -> record.value().contains("ignored"));
-        return factory;
-    }*/
-    
-    public ConsumerFactory<String, User> userConsumerFactory() {
-        Map<String, Object> props = new HashMap<>();
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "user-group");
-        return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new JsonDeserializer<>(User.class));
-    }
 
-    @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, User> userKafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, User> factory = new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(userConsumerFactory());
-        return factory;
-    }
+
     
     @Bean
 	public ConcurrentKafkaListenerContainerFactory<String, String> kafkaJsonListenerContainerFactory() {

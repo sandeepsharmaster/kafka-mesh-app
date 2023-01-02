@@ -17,6 +17,12 @@ class InitSend {
 	@Autowired
 	private KafkaSenderExample kafkaSenderExample;
 	
+	/*@Autowired
+	private KafkaSenderWithMessageConverter messageConverterSender;*/
+	
+	@Value("${org.example.kafka.topic.users}")
+	private String topic1;
+
 	@Value("${org.example.kafka.topic.bookings}")
 	private String topic2;
 	
@@ -26,14 +32,18 @@ class InitSend {
 		Thread.sleep(5000);
 		LOG.info("---------------------------------");
 		Booking visitor = Booking.newBuilder()
-				.setBookingId("XYZ")
-				.setFirstName("Sandeep")
+				.setBookingId("XYZ-1")
+				.setFirstName("Sandy")
 				.setLastName("Sharma")
-				.setBookingSource("Trivago")
+				.setBookingSource("MakeMyTrip")
 				.setBookingStatus("Confirmed")
-				.setPaymentType("CC")
+				.setPaymentType("NetBanking")
 				.build();
 		kafkaSenderExample.sendBookingMessage(visitor, "bookings");
+
+		Thread.sleep(5000);
+		LOG.info("---------------------------------");
+		kafkaSenderExample.sendCustomMessage(new User("Lucario"), "users");
 
 	}
 }

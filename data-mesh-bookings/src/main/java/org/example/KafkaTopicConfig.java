@@ -9,17 +9,9 @@ import org.springframework.kafka.config.TopicBuilder;
 @Configuration
 class KafkaTopicConfig {
 
-	@Value("${org.example.kafka.topic.users}")
-	private String topic1;
-
 	@Value("${org.example.kafka.topic.bookings}")
 	private String topic2;
-	
 
-	@Bean
-	NewTopic topic1() {
-		return TopicBuilder.name(topic1).build();
-	}
 
 	@Bean
 	NewTopic topic2() {

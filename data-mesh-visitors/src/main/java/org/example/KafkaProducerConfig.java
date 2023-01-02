@@ -35,7 +35,7 @@ class KafkaProducerConfig {
 
 	private final Logger LOG = LoggerFactory.getLogger(getClass());
 
-	@Value("${io.reflectoring.kafka.bootstrap-servers}")
+	@Value("${spring.kafka.bootstrap-servers}")
 	private String bootstrapServers;
 
 
@@ -54,18 +54,6 @@ class KafkaProducerConfig {
 		return new KafkaTemplate<>(visitorProducerFactory());
 	}
 
-	@Bean
-	public ProducerFactory<String, User> userProducerFactory() {
-		Map<String, Object> configProps = new HashMap<>();
-		configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-		configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-		configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
-		return new DefaultKafkaProducerFactory<>(configProps);
-	}
 
-	@Bean
-	public KafkaTemplate<String, User> userKafkaTemplate() {
-		return new KafkaTemplate<>(userProducerFactory());
-	}
 
 }

@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.pojo.Visitor;
+import org.example.pojo.Booking;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -18,8 +18,15 @@ class KafkaListenersExample {
 
 	private final Logger LOG = LoggerFactory.getLogger(KafkaListenersExample.class);
 
-	@KafkaListener(topics = {"visitors"}, groupId = "visitors-group")
-	public void consume(ConsumerRecord<String, Visitor> record) {
+
+	@KafkaListener(id = "1", topics = "users", groupId = "user-group", containerFactory = "kafkaJsonListenerContainerFactory")
+	void listenerWithMessageConverter(User user) {
+		LOG.info("MessageConverterUserListener [{}]", user);
+	}
+
+
+	@KafkaListener(topics = {"bookings"}, groupId = "bookings-group")
+	public void consume(ConsumerRecord<String, Booking> record) {
 		System.out.println("received = " + record.value() + " with key " + record.key());
 	}
 }

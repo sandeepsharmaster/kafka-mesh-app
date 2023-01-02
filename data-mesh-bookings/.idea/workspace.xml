@@ -5,12 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a5da2f4-11da-4f28-9e7e-eecf3befc3c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InitSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/InitSend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaListenersExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaListenersExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaProducerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaSenderExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaSenderExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/VisitorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/KafkaTopicConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/InitSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/InitSend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/KafkaConsumerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/KafkaConsumerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/KafkaListenersExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/KafkaListenersExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/KafkaProducerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/KafkaProducerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/KafkaSenderExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/KafkaSenderExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/KafkaTopicConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/KafkaTopicConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/data-mesh-bookings-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/data-mesh-bookings-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/data-mesh-bookings-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/data-mesh-bookings-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/InitSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/InitSend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaClassListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaListenersExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaListenersExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaSenderExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaSenderExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/KafkaTopicConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/java/org/example/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data-mesh-visitors/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../data-mesh-visitors/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +73,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Study/Kafka/handson/datamesh/local/kafka-mesh-app/data-mesh-bookings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Study/Kafka/handson/datamesh/local/kafka-mesh-app/data-mesh-visitors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.controller" />

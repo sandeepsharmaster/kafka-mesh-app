@@ -19,12 +19,6 @@ class KafkaListenersExample {
 	private final Logger LOG = LoggerFactory.getLogger(KafkaListenersExample.class);
 
 
-	@KafkaListener(id = "1", topics = "users", groupId = "user-group", containerFactory = "kafkaJsonListenerContainerFactory")
-	void listenerWithMessageConverter(User user) {
-		LOG.info("MessageConverterUserListener [{}]", user);
-	}
-
-
 	@KafkaListener(topics = {"bookings"}, groupId = "bookings-group")
 	public void consume(ConsumerRecord<String, Booking> record) {
 		System.out.println("received = " + record.value() + " with key " + record.key());
