@@ -1,18 +1,20 @@
 package org.example.controller;
 
 
-import java.net.URI;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
-@RequestMapping(path = "/visitor")
+@RequestMapping(path = "/visitors")
 public class VisitorController {
+
+    @GetMapping(path="/visitor", produces = "application/json")
+    public Visitor getVisitor()
+    {
+        System.out.println("** Get Call for booking details");
+        Visitor visitor = new Visitor("Sandy", "Sharma", 23, "CC", "Trivago--1", "sandy@gmail.com");
+        return visitor;
+    }
+
 }

@@ -1,0 +1,14 @@
+{
+     "type": "record",
+     "namespace": "org.example.pojo",
+     "name": "Offers",
+     "version": "1",
+     "doc": "Offers schema Version 1",
+     "fields": [
+       { "name": "first_name", "type": "string", "doc": "First Name of Visitor" },
+       { "name": "booking_id", "type": "string", "doc": "Booking Id of the Visitor" },
+       { "name": "payment_type", "type": "string", "doc": "payment type of booking" },
+	   { "name": "booking_source", "type": "string", "doc": "Booking source of the Visitor" },
+       { "name": "cash_back", "type": "string", "doc": "Cashback for the Visitor" }
+     ]
+}

@@ -1,0 +1,16 @@
+com\example\pojo\VisitorV2.class
+org\example\pojo\Visitor$Builder.class
+com\example\pojo\VisitorV2$Builder.class
+org\example\pojo\Booking$Builder.class
+org\example\v2\KafkaAvroJavaProducerV2Demo$1.class
+org\example\v1\KafkaAvroJavaProducerV1Demo.class
+org\example\v2\KafkaAvroJavaProducerV2Demo.class
+org\example\v1\Main.class
+org\example\pojo\Booking.class
+org\example\pojo\Visitor$1.class
+org\example\pojo\Visitor.class
+org\example\v1\KafkaAvroJavaProducerV1Demo$1.class
+org\example\pojo\Booking$1.class
+org\example\v1\KafkaAvroJavaConsumerV1Demo.class
+org\example\v2\KafkaAvroJavaConsumerV2Demo.class
+com\example\pojo\VisitorV2$1.class
