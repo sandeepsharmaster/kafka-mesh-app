@@ -39,13 +39,13 @@ public class KafkaAvroJavaConsumerV1Demo {
         System.out.println("Waiting for data...");
         try {
         while (true){
-            System.out.println("Polling");
+            System.out.println("Polling Visitor ... ");
             ConsumerRecords<String, Visitor> visitorRecords = visitorConsumer.poll(1000);
             //ConsumerRecords<String, Booking> bookingRecords = bookingConsumer.poll(1000);
             boolean got_data = false;
             for (ConsumerRecord<String, Visitor> visitorRecord : visitorRecords){
                 Visitor customer = visitorRecord.value();
-                System.out.println(customer);
+                System.out.println("Visitor : " +customer);
                 //System.out.println(customer.getBookingId());
                 visitorMap.put(customer.getBookingId(), customer);
                 got_data = true;
@@ -75,14 +75,14 @@ public class KafkaAvroJavaConsumerV1Demo {
         bookingConsumer.subscribe(Collections.singleton(booking_topic));
         try {
         while (true){
-            System.out.println("Polling");
+            System.out.println("Polling Booking ... ");
             //ConsumerRecords<String, Visitor> visitorRecords = visitorConsumer.poll(1000);
             ConsumerRecords<String, Booking> bookingRecords = bookingConsumer.poll(1000);
             boolean got_data = false;
 
             for (ConsumerRecord<String, Booking> bookingRecord : bookingRecords){
                 Booking booking = bookingRecord.value();
-                System.out.println(booking);
+                System.out.println("Booking : " +booking);
                 bookingMap.put(booking.getBookingId(), booking);
                 got_data = true;
             }
@@ -101,11 +101,13 @@ public class KafkaAvroJavaConsumerV1Demo {
         for (String key : visitorMap.keySet()) {
 
             Visitor visitor = (Visitor) visitorMap.get(key);
-            System.out.println("Visitor Object - " + key + ":" + visitorMap.get(key));
+            //System.out.println("Visitor Object - " + key + ":" + visitorMap.get(key));
 
             if(null != bookingMap.get(key)) {
                 Booking booking = (Booking) bookingMap.get(key);
-                System.out.println("Visitor " + visitor.getFirstName() + " has confirmed booking & payment type " + booking.getPaymentType());
+                System.out.println("Visitor " + visitor.getFirstName()
+                        + " has confirmed booking & payment type "
+                        + booking.getPaymentType() + " & subscription of email flag is " + visitor.getAutomatedEmail());
 
             }
         }

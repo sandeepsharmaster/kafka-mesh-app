@@ -12,7 +12,7 @@ import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 import org.apache.kafka.clients.producer.ProducerRecord;
 @Component
-class KafkaSenderExample {
+public class KafkaSenderExample {
 
 	private final Logger LOG = LoggerFactory.getLogger(KafkaSenderExample.class);
 
@@ -26,7 +26,7 @@ class KafkaSenderExample {
 		this.visitorKafkaTemplate = visitorKafkaTemplate;
 	}
 
-	void sendVisitorMessage(Visitor visitor, String topicName) {
+	public void sendVisitorMessage(Visitor visitor, String topicName) {
 		LOG.info("--------------------------------");
 		LOG.info("Sending Avro Serializer : {}", visitor);
 		LOG.info("--------------------------------");

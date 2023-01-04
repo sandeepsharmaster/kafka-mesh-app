@@ -20,9 +20,9 @@ public class Visitor implements Serializable {
   /** payment type of booking */
   private String booking_source;
   /** Booking Id of the Visitor */
-  private String automated_email;
+  private boolean automated_email;
 
-  public Visitor(String first_name, String last_name, int age, String booking_id, String booking_source, String automated_email) {
+  public Visitor(String first_name, String last_name, int age, String booking_id, String booking_source, boolean automated_email) {
     this.first_name = first_name;
     this.last_name = last_name;
     this.age = age;
@@ -71,11 +71,11 @@ public class Visitor implements Serializable {
     this.booking_source = booking_source;
   }
 
-  public String getAutomated_email() {
+  public boolean getAutomated_email() {
     return automated_email;
   }
 
-  public void setAutomated_email(String automated_email) {
+  public void setAutomated_email(boolean automated_email) {
     this.automated_email = automated_email;
   }
 }
